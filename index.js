@@ -9,7 +9,7 @@ app.use(express.static(path.join(process.cwd() + "/public/")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const msgFilePath = path.join(process.cwd() + "/msg.json");
+const msgFilePath = path.join(process.cwd() + "/msg1.json");
 
 app.get("/", (req, res) => {
   const msg = JSON.parse(fs.readFileSync(msgFilePath)).message;
